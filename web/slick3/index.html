@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="main">
+            <div class="your-class">
+                <div class="s1">
+                    <video muted controls
+                        src="http://h.vod.cgv.co.kr:80/vodCGVa/86728/86728_211212_1200_128_960_540.mp4"></video>
+                    <!-- autoplay: 자동재생
+                    muted: 소리 X
+                    controls: 컨트롤메뉴 켜기 -->
+                </div>
+                <div class="s2">
+                    <video controls
+                        src="http://h.vod.cgv.co.kr:80/vodCGVa/86728/86728_211131_1200_128_960_540.mp4"></video>
+
+                </div>
+                <div class="s3">
+                    <video controls
+                        src="http://h.vod.cgv.co.kr:80/vodCGVa/86728/86728_211010_1200_128_960_540.mp4"></video>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.your-class').slick({
+                autoplay: true,
+                dots: true,
+                fade: true, //좌우로 넘어간다! 보다는 페이드인-페이드아웃 느낌이 강함 
+                //  setting-name: setting-value
+            });
+        });
+    </script>
+</body>
+
+</html>
+<!-- 
+    1. your-class를 html에 넣기
+    //
+    2. cdn에서 slick.min.css를 넣기(css이므로 head에. 기존 style보다 먼저 적용되어야하므로 style.css보다 위에)
+    3. jquery를 script에 (위에!) 연결하고 slcik.mini.js를 연결하기
+    //여기까진 js~cdn사이트 통해서
+    4. slick 사이트 내의 script 함수 넣기$ () < 이거
+    +깃헙 내에서 옵션 참조
+ -->

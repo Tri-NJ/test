@@ -1,0 +1,94 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    list-style: none;
+}
+
+.wrap {
+    width: 800px;
+    margin: 100px auto 0;
+    background-color: beige;
+}
+
+.wrap .main {}
+
+.wrap .main .your-class {
+    height: 450px;
+}
+
+.wrap .main .your-class .slick-slide {
+    height: 450px;
+}
+
+.wrap .main .your-class .slick-slide video {
+    width: 100%;
+    /* 비디오는 비율이 유지됨! */
+}
+
+.wrap .main .your-class .slick-arrow{
+    position: absolute;
+    height: 20px;
+    top: calc(50% - 10px);
+    font-size: 0;
+    /* 폰트 기본값 16px. 크롬에서는 최소 10px. 그 이하의 폰트 크기는 적용이 안 됨. */
+    visibility: hidden;
+    /* 폰트를 없애고!(이거 안하면 화살표 근처에 공간 생김) 버튼을 안 보이게 함(이거 안하면 화살표 뒤에 애매한 버튼 배경 있음) > rgba에 알파값 0으로 해서 해도 될까?   */
+}
+
+.wrap .main .your-class .slick-prev{
+    z-index: 1;
+    left: 5%;
+}
+.wrap .main .your-class .slick-prev::after{
+    content: "\f104";
+    /* 번호 따는 법: 이모티콘 클릭하면 나오긴 함?? */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    visibility: visible;
+    font-size: 50px;
+    color: #fff;
+
+}
+
+.wrap .main .your-class .slick-next{
+    right: 5%;
+}
+
+.wrap .main .your-class .slick-next::after{
+    content: "\f105";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    visibility: visible;
+    font-size: 50px;
+    color: #fff;
+}
+
+.wrap .main .your-class .slick-dots{
+    text-align: center;
+}
+
+
+.wrap .main .your-class .slick-dots li{
+    display: inline-block; /* 인라인 속성을 가지면서 공간 차지? */
+    margin: 20px 30px 0px;
+}
+
+.wrap .main .your-class .slick-dots li button{
+    border: none;
+    font-size: 0;
+    width: 20px; height: 20px;
+    border-radius: 30%;
+    transition: 0.3s;
+}
+
+.wrap .main .your-class .slick-dots li.slick-active button{
+    background-color: #ddd;
+    background-color: #222;
+    width: 25px;
+    height: 25px;
+}

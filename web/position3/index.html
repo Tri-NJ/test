@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>position연습</title>
+</head>
+
+<body>
+    <div id="전체">
+        <!-- id는 폴더 내에서 중복되면 안 됨!!! class는 여러개 부여 가능한데 id는 하나만! 줘야함 -->
+        <div class="첫째자식">
+            <div class="wrap">
+                <div class="첫째손자 첫손1">첫째손자</div>
+                <div class="첫째손자 첫손2">첫째손자</div>
+            </div>
+        </div>
+
+        <div class="둘째자식">
+            <div class="둘째손자">둘째손자</div>
+        </div>
+
+        <div class="셋째자식">
+            <div class="셋째손자1">
+                <h4>정렬하는 요소들
+                    <ol>
+                        <li>coffee</li>
+                        <li>tea</li>
+                        <li>milk</li>
+                    </ol>
+                </h4>
+            </div>
+            <div class="셋째손자2">
+                <h4>
+                    <ul>
+                        <li>coffee</li>
+                        <li>milk</li>
+                        <li>tea</li>
+                        <p>가나다라마바사</p>
+                        <!-- 실행은 되지만 li요소가 아님! 자식요소로 안 됨!!!!
+                        ol ul의 자식은 li만!!!! -->
+                    </ul>
+                </h4>
+
+            </div>
+        </div>
+        <div class="넷째자식">
+            <div class="넷째손자">
+                <dl>
+                    <dt>커피</dt>
+                    <dd>커피는 맛있고 인간의 생명수이다</dd>
+                </dl>
+                <!-- description list , desc title, desc data 이다 -->
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이게 타이틀이었음</title>
+    <style>
+        div{color:pink;}
+        div.둘째 {color:blueviolet;} 
+        .셋째{color: aqua;}
+        .넷째 div {color:limegreen;
+            border: red solid 2px;
+            padding: 15px; /*내부공간. 넷째 안의 div면 전부! 적용되서 넷째 손자는 두번 적용됨*/ 
+            background-color: beige; } 
+        .넷째>div{border-color: green; /*이건 바로 밑의 div만*/}  
+        /* 왜 여긴 주석처리가 달라요? 
+        정답! 스타일 내부는 css라서 */
+
+        .막내 div{border: lightcoral solid 2px; padding: 20px;}
+
+        .막내 .막내자식 .막손자{
+            background-color: cornsilk;
+        }
+        .막내 .막내자식.막자2 .막손자 {background-color: honeydew;}
+        /*막자2of막내자식 < .을 붙여서 적을 것!*/
+
+            
+
+    </style>
+    <!-- 이쪽은 html이라서! 
+        태그이름{} 중괄호 넣기
+        div.클래스이름 {아무튼 무언가 스타일}
+        div 생략하고 .클래스이름 만 해도 됨! -->
+</head>
+<!-- 줄 전체 복사하는 법: Alt+Shift+↓ (근데 한 줄만! 아니면 그거... 드래그하면 됨.) -->
+<!-- 한줄주석화: Ctrl+/ / 부분주석화: Shift+Alt+A
+줄 이동: alt+방향키 / 선택: ctrl+shift+방향키
+줄 전체 지우기: shift+delete 인듯? -->
+<body>
+    <div class="첫째">
+        <!-- 이건 첫째의 자손? 자손은 내용인가? -->첫번째 줄입니다.</div>
+    <div class="둘째">두번째 줄입니다.</div>
+    <div class="셋째">세번째 줄입니다.</div>
+    <!-- 동급인 태그는 형제태그 -->
+    
+    <div class="넷째"> <!-- 부모태그 -->
+        여기는 먹나? ← 안먹는다 넷째 "아래의" div에 먹는 것임!
+        <div class="넷째자식"> 넷째자식1 </div>
+            <!-- 클래스 이름은 띄어쓰기 하지 않게 주의! -->
+        <div class="넷째자식"> 넷째자식2 </div>
+        <div class="넷째자식"> 
+            <div class="넷째자식">넷째손자</div> <!-- 손자는 자식이 아님! -->
+        </div>
+        </div>
+    
+    <div class="막내">
+        <div class="막내자식 막자1">
+            <div class="막손자"> 막손자1 </div>
+            <div class="막손자"> 막손자2 </div>
+        </div> <!-- .(클래스이름) tab < 하면 바로 생성됨(한글은 안 됨!!!!) -->
+        <div class="막내자식 막자2">
+            <div class="막손자"> 막손자3 </div>
+            <div class="막손자"> 막손자4 </div>    
+        </div> 
+                <!-- 막내자식이면서 서브네임?이 붙은 거임 -->
+            </div>         
+              
+        <!-- 클래스 이름이 같으면 위의 스타일이 동시적용 됨 -->
+</body>
+</html>
