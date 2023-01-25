@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+.section::after{
+    content: "\f863";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 200px;
+    /* 개발자 모드에서 content 번호 확인 > content를 둘러싸고있는 .i에서 해당 폰트의 family와 weight 확인해서 넣기 > Pro라면 Free로 바꾸기 */
+}
+i{
+    font-size: 100px;
+}
+
+.wrap2{
+    margin-top: 100px;
+    position: relative;
+    width: 400px;height: 400px;
+    background-color: lavender;
+}
+
+.wrap2 .section2{
+    position: absolute;
+    width: 100px; height: 100px;
+    background-color: blanchedalmond;
+    left: calc(50% - 50px); top: calc(50% - 50px);
+    /* 컴퓨터에게 50% - 50px을 계산하게 함(단위가 달라도 calc를 통하면 됨. - 부호 양옆으로 띄어쓰기 하기!!!! */
+    /* transform: translate(-50%,-50%); */
+    /*  < 애니메이션 넣을 때 transform이 깨질 수도 있음! */
+}

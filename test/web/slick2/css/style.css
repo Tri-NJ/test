@@ -1,0 +1,90 @@
+@charset "UTF-8";
+
+*{margin: 0;padding: 0;}
+
+ul,li{list-style: none;}
+
+.wrap{
+
+}
+
+.wrap .container{
+    /* slick 자체를 건들지 말고 slick 바깥의 태그로 넓이 조절할 것!!! */
+    width: 500px;
+    margin: 0 auto;
+
+}
+
+.wrap .container .slick .slick-slide{
+    height: 100%;
+}
+
+.wrap .container .slick img{
+    width: 100%;
+}
+
+
+.wrap .container .slick .slick-arrow{ /* 버튼 둘을 동시에 설정할 경우 */
+    position: absolute;
+    top: 50%; transform: translateY(-50%); /* 세로 기준의 중앙으로 */
+    visibility: hidden;
+    font-size: 0;
+    color: white;
+}
+
+.wrap .container .slick .slick-prev{
+    z-index: 1;
+    left: 10%;
+}
+.wrap .container .slick .slick-next{
+    right: 10%;
+}
+
+.wrap .container .slick .slick-prev::after{
+    content: "\f053";
+    visibility: visible;
+    font-size: 48px;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    /* 부모는 보이지 않지만 자식은 보이게 설정 */
+}
+
+.wrap .container .slick .slick-next::after{
+    content: "\f054";
+    visibility: visible;
+    font-size: 48px;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    /* 부모는 보이지 않지만 자식은 보이게 설정 */
+}
+
+.wrap .container .slick .slick-dots{
+    text-align: center;
+
+}
+
+
+.wrap .container .slick .slick-dots li{
+    display: inline;
+    margin: 0 10px; /* inline요소는 padding과 margin의 좌우는 적용되나 상하는 적용X */
+}
+
+.wrap .container .slick .slick-dots li button{
+    font-size: 0;
+    border: none;
+    border-radius: 50%;
+    background-color: dimgrey;
+    width: 15px;
+    height: 15px;
+    transition: 0.3s; /* active가 없는 쪽에도 줘야함!!! */
+}
+
+.wrap .container .slick .slick-dots li.slick-active button{
+    background-color: whitesmoke;
+    width: 25px;
+    border-radius: 10%;
+
+}
+
+/* 인라인 요소 중 공간을 인식하는 요소
+img button  */
